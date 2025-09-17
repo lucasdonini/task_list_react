@@ -21,7 +21,7 @@ const EstatisticasView = () => {
     <>
       <header>
         <h1>Página de estatísticas</h1>
-        <Navigator urlAtual="/estatisticas" />
+        <Navigator />
       </header>
       <main>
         <h2>Estatísticas</h2>

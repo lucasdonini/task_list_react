@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { routes } from "../../router";
 
-const Navigator = ({ urlAtual }) => {
-  const destinos = routes.filter((d) => d.path !== urlAtual);
+const Navigator = ({ mostrarUrlAtual }) => {
+  const url = useLocation().pathname
+  const destinos = mostrarUrlAtual ? routes : routes.filter((d) => d.path !== url);
 
   return (
     <nav>

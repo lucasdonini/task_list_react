@@ -19,7 +19,7 @@ const MainView = () => {
     <>
       <header>
         <Header titulo="Gerenciador de Tarefas" />
-        <Navigator urlAtual="/" />
+        <Navigator />
       </header>
 
       <h1>Olá React</h1>
