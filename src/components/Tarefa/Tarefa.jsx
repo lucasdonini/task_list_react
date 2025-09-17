@@ -26,7 +26,11 @@ const Tarefa = ({ dados, onRemove, onUpdate }) => {
         type="checkbox"
         checked={estaConcluida}
         disabled={estaEditando}
-        onChange={(e) => setConcluida(e.target.checked)}
+        onChange={(e) => {
+          const status = e.target.checked;
+          setConcluida(status);
+          onUpdate({ id, concluida: status });
+        }}
       />
       <input
         type="text"
